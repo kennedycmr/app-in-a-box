@@ -186,6 +186,8 @@ if [ -z $GCP_DEPLOYMENT_KEYFILE ]; then
     gcloud iam service-accounts keys create deploy.keys.json --iam-account=${SA}@${GCP_PROJECT_ID}.iam.gserviceaccount.com
 
     if [ -f ./deploy.keys.json ]; then
+        sudo chmod 777 deploy.keys.json
+        
         echo "GCP_DEPLOYMENT_KEYFILE=${WORKDIR}/test/deploy.keys.json" >>.env_vars
         export GCP_DEPLOYMENT_KEYFILE=${WORKDIR}/test/deploy.keys.json
     else
