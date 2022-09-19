@@ -39,7 +39,7 @@ fi
 
 
 ### Setup deployment key file.
-export GCP_DEPLOYMENT_KEYFILE=$(cat ${GCP_DEPLOYMENT_KEYFILE}/test/deploy.keys.json |base64)
+export GCP_DEPLOYMENT_KEYFILE=$(cat ${GCP_DEPLOYMENT_KEYFILE} |base64)
 
 
 
