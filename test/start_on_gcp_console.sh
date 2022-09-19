@@ -84,8 +84,11 @@ fi
 if [ -z $GCP_PROJECT_ID ]; then
     GCP_PROJECT_ID=$(gcloud config list |grep -e ^project |sed 's/project = //g')
 
-    printf "\n\nWe will try and setup everything in the GCP Project: ${GCP_PROJECT_ID}.\nIs this correct? (Y/N): "
-    read CONFIRM
+    CONFIRM="N"
+    if [ ! -z $GCP_PROJECT_ID ]; then
+        printf "\n\nWe will try and setup everything in the GCP Project: ${GCP_PROJECT_ID}.\nIs this correct? (Y/N): "
+        read CONFIRM
+    fi
 
     if [ $CONFIRM != "Y" ]; then
         printf "\nEnter the GCP PROJECT ID you want to set this up in: "
@@ -177,14 +180,14 @@ if [ -z $GCP_DEPLOYMENT_KEYFILE ]; then
 
 
     ## Create a service account keyfile and store locally
-    printf "\n\n\nCreating new keyfile for ${SA}@${GCP_PROJECT_ID}.iam.gserviceaccount.com and storing as deploy.keys.json"
+    printf "\n\n\nCreating new keyfile for ${SA}@${GCP_PROJECT_ID}.iam.gserviceaccount.com and storing as deploy.keys.json\n"
     gcloud iam service-accounts keys create deploy.keys.json --iam-account=${SA}@${GCP_PROJECT_ID}.iam.gserviceaccount.com
 
     if [ -f ./deploy.keys.json ]; then
         echo "GCP_DEPLOYMENT_KEYFILE=${WORKDIR}/test/deploy.keys.json" >>.env_vars
         export GCP_DEPLOYMENT_KEYFILE=${WORKDIR}/test/deploy.keys.json
     else
-        printf "\n\nCant find keyfile that we should have created. Can't continue."
+        printf "\n\nCant find keyfile that we should have created. Can't continue.\n"
         return 1
     fi
 fi 
@@ -309,3 +312,5 @@ if [ $CONFIRM != "Y" ]; then
     printf "Can't continue"
     return 1
 fi
+
+source ${BITBUCKET_CLONE_DIR}/test/run_unattend.sh

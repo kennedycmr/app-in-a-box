@@ -11,14 +11,19 @@ Use this as a template to get started, and then modify to suit your requirements
 
 The below steps describe the steps you need to take assuming you are trying to manually
  deploy this web-app. These instructions assume will be performing all the steps from a GCP
- console. You could however use your own running container (e.g. Docker/Podman), and if so,
- use the following command to run the correct public container and then run the steps from
- within the interactive session:
+ console. 
 
- ```
- cd to/where/these/files/reside
- docker run --rm -v .:/workdir:z -ti gcr.io/google.com/cloudsdktool/cloud-sdk:latest bash
- ```
+ Run the following command: 
+
+```
+git clone https://github.com/kennedycmr/app-in-a-box && \
+docker run --rm -v $(pwd)/app-in-a-box:/workdir -ti gcr.io/google.com/cloudsdktool/cloud-sdk:latest bash /workdir/test/start_on_gcp_console.sh
+```
+
+
+
+
+# Below are the manual steps to setup a project
 
 ## Create and configure a new GCP Project
 
