@@ -94,6 +94,7 @@ if [ -z $GCP_PROJECT_ID ]; then
 
     echo "GCP_PROJECT_ID=${GCP_PROJECT_ID}" >>.env_vars
 fi
+gcloud config set project $GCP_PROJECT_ID
 
 
 ## Set the deployment region
