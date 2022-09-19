@@ -112,6 +112,7 @@ export SERVICES_TO_ENABLE=" artifactregistry
                             cloudfunctions
                             cloudresourcemanager
                             firebase
+                            firebaserules
                             serviceusage"
 
 for SERVICE in $SERVICES_TO_ENABLE; do 

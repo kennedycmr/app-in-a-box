@@ -38,4 +38,9 @@ resource "google_project_service" "api_containerregistry" {
   service = "containerregistry.googleapis.com"
 }
 
+resource "google_project_service" "api_containerregistry" {
+  project = data.google_project.google_project.project_id
+  service = "firebaserules.googleapis.com"
+}
+
 #===========================================================
