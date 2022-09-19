@@ -18,6 +18,7 @@ The below steps describe the steps you need to take assuming you are trying to m
 Run the following command: 
 
 ```
+cd ~ && \
 git clone https://github.com/kennedycmr/app-in-a-box && \
 docker run --rm -v $(pwd)/app-in-a-box:/workdir -ti gcr.io/google.com/cloudsdktool/cloud-sdk:latest bash /workdir/test/start_on_gcp_console.sh
 ```
@@ -32,12 +33,24 @@ ${app-in-the-box-files}/test/.env_vars
 ```
 
 
-### Re-run the pipeline using your existing variables.
-Run the following command: 
+## Run stage 2
+Re-run the pipeline using your existing variables, by running the following command: 
 
 ```
+cd ~ && \
 docker run --rm -v $(pwd)/app-in-a-box:/workdir -ti gcr.io/google.com/cloudsdktool/cloud-sdk:latest bash /workdir/test/start_on_gcp_console.sh
 ```
+
+
+## Save Environment Variables
+If your intention is to use this deployment later, you should record your environment variables outside of your GCP console. 
+This is so you can use again. 
+
+NOTE: The key file found in the "app-in-a-box/test/deploy.keys.json" should be considered secret. Do not share with anyone.
+Preferably delete this key at the earliest opportunity. You can always create a new one through the console if needed.
+
+
+
 
 
 
