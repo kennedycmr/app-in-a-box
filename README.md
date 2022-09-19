@@ -11,12 +11,31 @@ Use this as a template to get started, and then modify to suit your requirements
 
 The below steps describe the steps you need to take assuming you are trying to manually
  deploy this web-app. These instructions assume will be performing all the steps from a GCP
- console. 
+ console. You are also using a new GCP Project and your user account has owner rights to that project.
 
- Run the following command: 
+
+## Run stage 1
+Run the following command: 
 
 ```
 git clone https://github.com/kennedycmr/app-in-a-box && \
+docker run --rm -v $(pwd)/app-in-a-box:/workdir -ti gcr.io/google.com/cloudsdktool/cloud-sdk:latest bash /workdir/test/start_on_gcp_console.sh
+```
+
+
+## Obtain the remaining 4 variables
+You will be asked to get values for 4 variables from your newly deployed project resources and your Azure tenant. 
+Obtain those variables and update the file so the 4 variables have correct data: 
+
+```
+${app-in-the-box-files}/test/.env_vars
+```
+
+
+### Re-run the pipeline using your existing variables.
+Run the following command: 
+
+```
 docker run --rm -v $(pwd)/app-in-a-box:/workdir -ti gcr.io/google.com/cloudsdktool/cloud-sdk:latest bash /workdir/test/start_on_gcp_console.sh
 ```
 

@@ -41,9 +41,13 @@ fi
 
 
 ### Setup deployment key file.
-export GCP_DEPLOYMENT_KEYFILE=$(cat ${GCP_DEPLOYMENT_KEYFILE} |base64)
-
-
+if [ -f ${GCP_DEPLOYMENT_KEYFILE} ]; then
+    sudo chmod 777 ${GCP_DEPLOYMENT_KEYFILE}
+    export GCP_DEPLOYMENT_KEYFILE=$(cat ${GCP_DEPLOYMENT_KEYFILE} |base64)
+else
+    printf "\n\nCan't locate ${GCP_DEPLOYMENT_KEYFILE}. Can't continue."
+    return 1
+fi
 
 
 ### Run Bitbucket pipelines
