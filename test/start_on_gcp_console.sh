@@ -187,9 +187,9 @@ if [ -z $GCP_DEPLOYMENT_KEYFILE ]; then
 
     if [ -f ./deploy.keys.json ]; then
         sudo chmod 777 deploy.keys.json
-        
-        echo "GCP_DEPLOYMENT_KEYFILE=${WORKDIR}/test/deploy.keys.json" >>.env_vars
-        export GCP_DEPLOYMENT_KEYFILE=${WORKDIR}/test/deploy.keys.json
+
+        echo "GCP_DEPLOYMENT_KEYFILE=${BITBUCKET_CLONE_DIR}/test/deploy.keys.json" >>.env_vars
+        export GCP_DEPLOYMENT_KEYFILE=${BITBUCKET_CLONE_DIR}/test/deploy.keys.json
     else
         printf "\n\nCant find keyfile that we should have created. Can't continue.\n"
         return 1
