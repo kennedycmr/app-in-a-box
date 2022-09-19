@@ -3,6 +3,8 @@
 export BITBUCKET_CLONE_DIR=/workdir
 export BITBUCKET_REPO_SLUG=app-in-a-box
 
+cd ${BITBUCKET_CLONE_DIR}/test
+
 
 
 ### Get local environment variables
