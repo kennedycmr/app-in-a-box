@@ -1,0 +1,59 @@
+/* MyEvents onload */
+.MyEvents-Container {
+    display: grid;
+    grid-template-rows: .1fr 1fr;
+    grid-template-areas:
+    "MyEvents-Registered-Header"
+    "MyEvents-Registered-Body"
+    "MyEvents-Waitlisted-Header"
+    "MyEvents-Waitlisted-Body";
+    text-align: left;
+    padding: 2%;
+}
+
+.MyEvents-Title {
+    color: rgba(64, 119, 218, 1);
+}
+
+.Searchbox input{
+    box-shadow: 1px 1px 5px rgba(98, 98, 98, 0.25);
+    border: none;
+    border-radius: 5px;
+    width: 300px;
+}
+
+.Waitlist-Title {
+    color: rgba(64, 119, 218, 1);
+}
+
+
+/* Registered Registered Events */
+.MyEvents-Registered-Header{
+    grid-area: MyEvents-Registered-Header;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+.MyEvents-Registered-Body{
+    flex-wrap: wrap;
+    grid-area: MyEvents-Registered-Body;
+    padding-top: 50px;
+    display: flex;
+}
+
+
+/* Registered Registered Events */
+.MyEvents-Waitlisted-Header{
+    grid-area: MyEvents-Waitlisted-Header;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+.MyEvents-Waitlisted-Body{
+    flex-wrap: wrap;
+    grid-area: MyEvents-Waitlisted-Body;
+    padding-top: 50px;
+    display: flex;
+}

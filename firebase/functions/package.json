@@ -1,0 +1,34 @@
+{
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "14"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "@google-cloud/firestore": "5.x.x",
+    "@google-cloud/functions-framework": "3.x.x",
+    "@google-cloud/logging": "10.x.x",
+    "@google-cloud/secret-manager": "3.x.x",
+    "@google-cloud/storage": "6.x.x",
+    "firebase-admin": "10.x.x",
+    "firebase-functions": "3.x.x",
+    "google-auth-library": "8.x.x",
+    "jsonwebtoken": "8.x.x",
+    "node-fetch": "2.x.x"
+  },
+  "devDependencies": {
+    "eslint": "8.x.x",
+    "eslint-config-google": "0.x.x",
+    "firebase-functions-test": "2.x.x"
+  },
+  "private": true
+}

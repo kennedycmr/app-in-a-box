@@ -1,0 +1,147 @@
+/* ================================================ */
+/* Onload Page */
+/* ================================================ */
+
+/* Users Table Styling */
+
+.Users-Onload-Delete-Img{
+    min-width: 35px;
+    min-height: 35px;
+    max-width: 35px;
+    max-height: 35px;
+    cursor: pointer;
+}
+
+/* ================================================ */
+/* Create Page */
+/* ================================================ */
+
+/* Page container */
+.Users-Create-Container{
+    display: grid;
+    grid-template-areas: 
+    "Users-Create-Title Users-Create-Title"
+    "Users-Create-Content-Container Users-Create-Content-Container";
+}
+
+/* Page Layout */
+.Users-Create-Title{
+    grid-area: Users-Create-Title;
+    display: flex;
+    flex-direction: row;
+    font-size: var(--heading);
+    font-weight: 600;
+    margin: 1em 0em;
+}
+
+.Users-Create-Content-Container{
+    grid-area: Users-Create-Content-Container;
+    display: grid;
+    grid-template-areas: 
+    "Users-Create-Search Users-Create-Selected"
+    "Users-Create-Users Users-Create-Selected"
+    "Users-Create-Buttons Users-Create-Buttons";
+    grid-gap: 30px;
+}
+
+/* Search Box */
+.Users-Create-Search{
+    grid-area: Users-Create-Search;
+    border: 0.5px solid lightgray;
+    border-radius: 8px;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    color: lightgray;
+    cursor: text;
+    width: 100%;
+}
+.Users-Create-Search input{
+    width: 100%;
+    border: none;
+    outline: none
+}
+.Users-Create-Search img{
+    cursor: default;
+    width: 30px;
+    height: 30px;
+}
+
+/* Shared Table > Used on both side */
+.Users-Create-Table {
+    width: 100%;
+    text-align: left;
+    border-bottom: 0.5px solid lightgray;
+    font-size: var(--body);
+}
+.Users-Create-Table td {
+    padding: 10px;
+    cursor: pointer;
+}
+.Users-Create-Table td:hover{
+    background-color: #EFF7FF;
+}
+.Users-Create-Table img{
+    height: 35px;
+    width: 35px;
+}
+
+/* Available Users > People WITHOUT the admin role */
+.Users-Create-Users{
+    grid-area: Users-Create-Users;
+    width: 90%;
+    min-height: 200px;
+}
+
+/* Seleted Users > People we want to ASSIGN the admin role to */
+.Users-Create-Selected{
+    grid-area: Users-Create-Selected;
+    text-align: start;
+    border-left: 0.5px solid lightgray;
+    padding-left: 30px;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+.Users-Create-Search-Container img{
+    cursor: pointer;
+    width: 35px;
+    height: 35px;
+    margin-left: 20px;
+}
+
+/* Footer Buttons > How you Save or Cancel */
+.Users-Create-Buttons{
+    grid-area: Users-Create-Buttons;
+    display: flex;
+    flex-direction: row;
+}
+
+/* ================================================ */
+/* Delete Page */
+/* ================================================ */
+
+.Users-Delete-Container{
+    display: grid;
+    grid-template-areas: 
+    "Users-Delete-Title"
+    "Users-Delete-Footer"
+    "Users-Delete-Buttons";
+    grid-gap: 30px;
+}
+
+/* Page Layout */
+.Users-Delete-Title{
+    grid-area: Users-Delete-Title;
+}
+
+.Users-Delete-Footer{
+    grid-area: Users-Delete-Footer;
+}
+
+.Users-Delete-Buttons{
+    grid-area: Users-Delete-Buttons;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}

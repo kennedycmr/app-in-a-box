@@ -1,0 +1,25 @@
+/* ------------------------------------------------------------ */
+/** App Styling                                                **/
+ /* ------------------------------------------------------------ */
+
+/* Ensures if you change the box-sizing of an element, everything inside the element will inherit the box-sizing of that element */
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+.App-Container{
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    grid-template-areas:
+    'App-Container-Nav App-Container-Body';
+}
+
+.App-Container-Nav{
+    grid-area: App-Container-Nav;
+}
+
+.App-Container-Body{
+    grid-area: App-Container-Body;
+}

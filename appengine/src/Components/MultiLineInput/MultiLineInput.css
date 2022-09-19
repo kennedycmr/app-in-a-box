@@ -1,0 +1,33 @@
+.MultiLineInput-Container{
+    display: block;
+    width: 100%;
+    min-height: 200px;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.7;
+    color: #212529;
+    background-color: white;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    appearance: none;
+    border-radius: .25rem;
+    margin-bottom: 10px;
+}
+
+.MultiLineInput-Container-Read{
+    display: block;
+    width: 100%;
+    min-height: 200px;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.7;
+    color: #212529;
+    background-color: white;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    appearance: none;
+    margin-bottom: 10px;
+    border: none;
+}

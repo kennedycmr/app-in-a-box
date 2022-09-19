@@ -1,0 +1,31 @@
+/* --------------------------------- */
+/* Location Catalogue Item (Card)    */
+/* --------------------------------- */
+
+.Location-Card{
+    border: 0.5px solid rgb(68, 140, 223);
+    border-left: 25px solid rgb(68, 140, 223);
+    border-radius: 5px;
+    margin: 2rem 0rem;
+    padding: 1.5rem;
+    text-align: left;
+    min-width: 250px;
+}
+
+.Location-Name{
+    font-size: var(--subheading);
+    font-weight: 600;
+}
+
+.Location-Address{
+    color: #757575;
+    font-weight: 600;
+    margin: 15px 0px 10px 0px;
+    font-size: var(--body);
+}
+
+.Map-Icon{
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+}

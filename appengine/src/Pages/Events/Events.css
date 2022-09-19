@@ -1,0 +1,36 @@
+/* Events onload */
+.Events-Container {
+    display: grid;
+    grid-template-rows: .1fr 1fr;
+    grid-template-areas:
+    "Events-Header"
+    "Events-Body";
+    text-align: left;
+    padding: 2%;
+}
+
+.Events-Header{
+    grid-area: Events-Header;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+
+.Events-Title {
+    color: rgba(64, 119, 218, 1);
+}
+
+.Events-Body{
+    flex-wrap: wrap;
+    grid-area: Events-Body;
+    padding-top: 50px;
+    display: flex;
+}
+
+.Searchbox input{
+    box-shadow: 1px 1px 5px rgba(98, 98, 98, 0.25);
+    border: none;
+    border-radius: 5px;
+    width: 300px;
+}

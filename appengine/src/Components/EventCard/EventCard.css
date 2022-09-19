@@ -1,0 +1,55 @@
+/* Event Card Container */
+.Events-EventCard-Container{
+    display: grid;
+    grid-template-areas: 
+    'Events-AdminButton'
+    'Events-EventCard';
+    grid-template-rows: 35px 1fr;
+    border: 1px solid black;
+    border-radius:5px;
+    width: 320px;
+    min-height: 260px;
+    padding: 10px;
+    cursor: pointer;
+    text-align: center;
+    margin-right: 30px;
+    margin-bottom: 30px;
+}
+.Events-EventCard-Container:hover {
+    border: 1px solid #4077DA;
+    background-color:#E9F6FF;
+}
+
+.Events-AdminButton{
+    grid-area: Events-AdminButton;
+    z-index: 999;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.Events-AdminButton img:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+/* Events Card Component */
+.Events-EventCard {
+    grid-area: Events-EventCard;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.EventCard-Title {
+    grid-area: Events-Title;
+    color: #0C6CDE;
+    font-size: larger;
+    font-weight: 500;
+}
+
+.Event-HiddenLabel{
+    background-color: #4077DA;
+    color: white;
+    padding: .25%;
+    border-radius: 5px 5px 5px 5px;
+}

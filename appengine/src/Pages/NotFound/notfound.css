@@ -1,0 +1,18 @@
+/* ---------------------------- */
+/* Page not found (styling)     */
+/* ---------------------------- */
+
+.NotFound-Container{
+    padding: 10% 15%;
+    text-align: center;
+    height: fit-content;
+    overflow-anchor: none;
+    font-size: var(--body);
+}
+
+.NotFound-Title {
+    font-size: xx-large;
+    font-weight: lighter;
+    padding: 0% 0% 1% 0%;
+    margin: 0%;
+  }

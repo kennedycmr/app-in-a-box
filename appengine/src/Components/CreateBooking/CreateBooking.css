@@ -1,0 +1,38 @@
+/* ------------------------------------------------------ */
+/*  Thank You (Success) Page                              */
+/* ------------------------------------------------------ */
+
+.Form-Success{
+    display: flex;
+    align-items: center;
+    border: 0.5px solid #daddd7;
+    color: black;
+    padding: 40px;
+    text-align: left;
+    line-height: 1.7;
+    border-radius: 3px;
+}
+
+.ThankYou-Graphic{
+    max-width: 200px;
+    max-height: 200px;
+    margin-right: 30px;
+}
+
+.ThankYou-Heading{
+    font-size: var(--heading);
+    font-weight: 600;
+}
+
+
+/* ------------------------------------------------------------ */
+/** CSS Media Queries (Mobile)                                 **/
+/* ------------------------------------------------------------ */
+
+@media (max-width: 500px) {
+
+    .ThankYou-Graphic {
+        display: none;
+    }
+ 
+}

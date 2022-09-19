@@ -1,0 +1,58 @@
+/* ------------------------------------------------------ */
+/*  Login Page Styling (Unauthenticated State)            */
+/* ------------------------------------------------------ */
+
+
+.LoginHandler-Container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10% 2%;
+}
+
+.Login-Graphic {
+    max-width: 250px;
+    max-height: 250px;
+}
+
+.Login-Detail{
+    display: flex;
+    flex-direction: column;
+    gap: 20px 0px;
+    margin: 25px;
+    font-size: var(--body);
+}
+
+.Login-Button{
+    text-align: left;
+}
+
+/* ------------------------------------------------------ */
+/*  Login Failed                                          */
+/* ------------------------------------------------------ */
+
+.ErrorHandler-Container{
+    padding: 2%;
+    text-align: center;
+}
+
+.Error-Graphic{
+    max-width: 289px;
+    max-height: 255px;
+    margin: 1.5em 0em;
+}
+
+
+/* ------------------------------------------------------------ */
+/** CSS Media Queries (Mobile)                                 **/
+/* ------------------------------------------------------------ */
+
+@media (max-width: 500px) {
+
+    .Login-Graphic {
+        display: none;
+    }
+ 
+}
+
+

@@ -1,0 +1,89 @@
+// Firestore Security Rules
+// https://firebase.google.com/docs/firestore/security/get-started#writing_rules
+// https://firebase.google.com/docs/firestore/security/rules-structure
+// https://firebase.google.com/docs/firestore/security/rules-conditions#access_other_documents
+
+rules_version = '2';
+
+//Allows the user document creation > if user is using their own uid and email, 
+// and they are not granting themselves an admin role
+// We have a zero trust model for the frontend
+function ValidateUserCreation(user, data){
+	return user.uid == data.uid &&
+  	user.token.email == data.emailaddress &&
+    data.roles.isUser == true &&
+    data.roles.isAdmin == false
+}
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+  
+    //--------------------------------------------------
+    //  Define Functions
+    //--------------------------------------------------
+
+    //Checks if the user is authenticated, i.e. has a valid token
+    function isAuthenticated(){
+      return request.auth != null
+    }
+
+    //Update > Limit what fields can be updated > data = current state of document, newData is the changes you're making
+    //Checks differences between current and new, if there is a difference, it checks what fields have been changed
+    //Compares this with the fields we allow to change
+    function ValidateKeysUpdate(data, newData, keys){
+      return data.diff(newData).affectedKeys().hasOnly(keys);
+    }
+
+    //Create > Validates that the request only has keys that have been specified in 'keys' param
+    function ValidateKeysCreate(data, keys){
+      return data.keys().hasOnly(keys);
+    }
+
+    //--------------------------------------------------
+    //  'users' Collection
+    //  All rules enforce auth
+    //--------------------------------------------------
+
+    //Security rules - 'users' collection
+    match /users/{document} {
+      allow read: if isAuthenticated() && resource.data.uid == request.auth.uid;
+      allow create: if isAuthenticated() && ValidateUserCreation(request.auth, request.resource.data);
+      allow read, write: if isAuthenticated() && resource.data.roles.isAdmin == true;
+ 
+    }
+
+    //--------------------------------------------------
+    //  'events' Collection
+    //  All rules enforce auth
+    //--------------------------------------------------
+
+    //Security rules - 'events' collection
+    match /events/{document} {
+      allow read, create, update: if isAuthenticated(); 
+    }
+
+
+    //--------------------------------------------------
+    //  'registrations' Collection
+    //  All rules enforce auth
+    //--------------------------------------------------
+    
+    //Security rules - 'registrations' collection
+    match /registrations/{document} {
+      allow read: if isAuthenticated();
+      allow create: if isAuthenticated();
+      allow update: if isAuthenticated();
+    }
+
+    //--------------------------------------------------
+    //  'failures' Collection
+    //  All rules enforce auth
+    //--------------------------------------------------
+
+    //Security rules - 'failures' collection
+    match /failures/{document} {
+      allow create: if isAuthenticated();
+    }
+
+  }
+}

@@ -1,0 +1,48 @@
+/* ---------------------------- */
+/* Location (MapView) Header    */
+/* ---------------------------- */
+
+.Location-Header {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 40px);
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "Location-Name"
+        "Location-StreetAddress"
+        "Location-Hours";
+    text-align: left;
+    border: 0.5px solid #C1C8B9;
+    padding: 1rem 1rem 1rem 1.5rem;
+    align-items: center;
+    font-weight: 600;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+    min-width: 300px;
+}
+
+.Location-Name {
+    grid-area: Location-Name;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: var(--subheading);
+}
+
+.Location-StreetAddress {
+    grid-area: Location-StreetAddress;
+    color: #0C6CDE;
+    font-size: var(--body);
+}
+
+.Location-Hours{
+    grid-area: Location-Hours;
+    font-size: var(--body);
+    color: #494848;
+}
+
+.Map{
+    width: 100%;
+    min-height: 500px;
+}

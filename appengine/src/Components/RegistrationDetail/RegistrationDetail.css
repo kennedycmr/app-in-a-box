@@ -1,0 +1,159 @@
+.RegistrationDetail-Container {  
+    display: grid;
+    grid-template-rows: 200px 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "RegistrationDetail-Header"
+      "RegistrationDetail-Body";
+    text-align: left;
+    padding: 2%;
+}
+
+.RegistrationDetail-Header { 
+    grid-area: RegistrationDetail-Header;
+    display: grid;
+    grid-template-rows: 50px 1fr;
+    grid-template-areas:
+        "RegistrationDetail-BackButton"
+        "RegistrationDetail-Title";
+    background-color: rgba(64, 119, 218, 1);
+    color: white;
+}
+
+.RegistrationDetail-BackButton { 
+    grid-area: RegistrationDetail-BackButton; 
+    display: flex;
+    justify-content: left;
+    padding: 10px;
+}
+
+.RegistrationDetail-Title { 
+    grid-area: RegistrationDetail-Title; 
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+}
+
+.RegistrationDetail-Body { 
+    grid-area: RegistrationDetail-Body; 
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+        "RegistrationDetail-Body-Description"
+        "RegistrationDetail-Body-Table";
+    padding: 2%;
+}
+
+.RegistrationDetail-Body-Description { 
+    grid-area: RegistrationDetail-Body-Description; 
+}
+
+.RegistrationDetail-Body-Table { 
+    grid-area: RegistrationDetail-Body-Table; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.RegistrationDetail-Body-Table button { 
+    width: 300px;
+    margin-top: 10px;
+}
+
+.RegistrationDetail-Label {
+    background-color: #FBBC05;
+    color: white;
+    padding: .25%;
+    border-radius: 5px 5px 5px 5px;
+}
+
+/* Below is the styling for the Event Register Success Page */
+
+.EventRegister-Container {  
+    display: grid;
+    grid-template-rows: 200px 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "EventRegister-Header"
+      "EventRegister-Body";
+    text-align: center;
+}
+
+.EventRegister-Header { 
+    grid-area: EventRegister-Header;
+    display: grid;
+    grid-template-rows: 50px 1fr;
+    grid-template-areas:
+        "EventRegister-BackButton"
+        "EventRegister-Title";
+    background-color: rgba(64, 119, 218, 1);
+    color: white;
+}
+
+.EventRegister-BackButton { 
+    grid-area: EventRegister-BackButton; 
+    display: flex;
+    justify-content: left;
+    padding: 10px;
+}
+
+.EventRegister-Title { 
+    grid-area: EventRegister-Title; 
+    display: flex;
+    justify-content: center;
+    font-size: 40px; 
+}
+
+.EventRegister-Body { 
+    grid-area: EventRegister-Body; 
+    display: grid;
+    justify-content: center;
+    padding: 2%;
+}
+
+/* Below is the styling for the Event Waitlist Success Page */
+.EventWaitlist-Container {  
+    display: grid;
+    grid-template-rows: 200px 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "EventWaitlist-Header"
+      "EventWaitlist-Body";
+    text-align: center;
+}
+
+.EventWaitlist-Header { 
+    grid-area: EventWaitlist-Header;
+    display: grid;
+    grid-template-rows: 50px 1fr;
+    grid-template-areas:
+        "EventWaitlist-BackButton"
+        "EventWaitlist-Title";
+    background-color: rgba(64, 119, 218, 1);
+    color: white;
+}
+
+.EventWaitlist-BackButton { 
+    grid-area: EventWaitlist-BackButton; 
+    display: flex;
+    justify-content: left;
+    padding: 10px;
+    
+}
+
+.EventWaitlist-Title { 
+    grid-area: EventWaitlist-Title; 
+    display: flex;
+    justify-content: center;
+    font-size: 40px; 
+}
+
+.EventWaitlist-Body { 
+    grid-area: EventWaitlist-Body; 
+    display: grid;
+    justify-content: center;
+    padding: 2%;
+}

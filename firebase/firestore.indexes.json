@@ -1,0 +1,56 @@
+{
+  "indexes": [
+    {
+      "collectionGroup": "events",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { 
+          "fieldPath": "status", 
+          "order": "ASCENDING" 
+        },
+        { 
+          "fieldPath": "startepoch", 
+          "order": "ASCENDING" 
+        }
+      ]
+    },
+    {
+      "collectionGroup": "events",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { 
+          "fieldPath": "eventadmins",
+          "arrayConfig": "CONTAINS"
+        },
+        { 
+          "fieldPath": "status",
+          "order": "ASCENDING"
+        },
+        { 
+          "fieldPath": "startepoch",
+          "order": "ASCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "registrations",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { 
+          "fieldPath": "eventid",
+          "order": "ASCENDING"
+        },
+        { 
+          "fieldPath": "useremail",
+          "order": "ASCENDING"
+        },
+        { 
+          "fieldPath": "status",
+          "order": "ASCENDING"
+        }
+      ]
+    }
+  ],
+  "fieldOverrides": [
+  ]
+}

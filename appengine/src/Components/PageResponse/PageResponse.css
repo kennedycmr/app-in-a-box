@@ -1,0 +1,12 @@
+/* ---------------------------- */
+/*  Page Styling                */
+/* ---------------------------- */
+
+.PageResponse-Container{
+    text-align: center;
+}
+
+.Pending {
+    font-size: var(--subheading);
+    font-weight: 600;
+}

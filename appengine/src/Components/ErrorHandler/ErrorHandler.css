@@ -1,0 +1,28 @@
+/* ------------------------------------------------------------ */
+/** Error Page Styling                                         **/
+/* ------------------------------------------------------------ */
+
+.ErrorHandler-Container{
+    padding: 2%;
+    text-align: center;
+}
+
+.Error-Graphic{
+    max-width: 289px;
+    max-height: 255px;
+    margin: 1.5em 0em;
+}
+
+/* ------------------------------------------------------------ */
+/** CSS Media Queries (Mobile)                                 **/
+/* ------------------------------------------------------------ */
+
+@media (max-width: 375px) {
+
+    .Error-Graphic{
+        max-width: 250px;
+        max-height: 220px;
+        margin: 1.5em 0em;
+    }
+ 
+}

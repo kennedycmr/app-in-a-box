@@ -1,0 +1,198 @@
+/* CSS Rules */
+
+/* CSS Variables */
+:root {
+    /* Font Sizes */
+    --heading: 1.5rem;
+    --subheading: 1.25rem;
+    --body: 1rem;
+
+    /* Colours */
+    --tlogreen: #C1C7BB;
+}
+
+/* Rule - Images should never be rendered at a size wider than their containing element using max-inline-size */
+img {
+    max-inline-size: 100%;
+    block-size: auto;
+}
+
+/* ------------------------------------------------------ */
+/** Primary Button (Black Fill & White Text)             **/
+/*  Purpose: Use this for a call to action button         */
+/* ------------------------------------------------------ */
+
+.Primary-Button{
+    border: 2.5px solid rgba(64, 119, 218, 1);
+    background-color: rgba(64, 119, 218, 1);
+    color: white;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin: 5px 0px 5px 0px;
+    font-weight: 600;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.5);
+    font-size: var(--body);
+}
+
+.Primary-Button:disabled{
+    background-color: rgb(194, 194, 194);
+    border: 2.5px solid rgb(184, 184, 184);
+    color: white;
+}
+
+.Primary-Button:hover{
+    transform: scale(1.03);
+    cursor: pointer;
+}
+
+/* ------------------------------------------------------ */
+/** Secondary Button (White Fill & Black Text)           **/
+/*  Purpose: Use this secondary action, e.g. cancel       */
+/* ------------------------------------------------------ */
+
+.Secondary-Button{
+    border: 2px solid black;
+    background-color: white;
+    box-sizing: border-box;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+    color: black;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-weight: 600;
+    margin: 5px 10px 5px 0px;
+    cursor: pointer;
+    font-size: var(--body);
+}
+
+.Secondary-Button:hover{
+    transform: scale(1.03);
+}
+
+/* ------------------------------------------------------------ */
+/** Link Button (Grey Fill & White Text)                       **/
+/*  Purpose: Use this for any page link buttons                 */
+/* ------------------------------------------------------------ */
+
+.Link-Button {
+    border: 2px solid #3C3C3C;
+    background-color: #3C3C3C;
+    color: white;
+    border-radius: 30px;
+    padding: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    text-align: center;
+}
+
+.Link-Button:hover {
+    background-color: #535353;
+    color: white;
+}
+
+/* ------------------------------------------------------------ */
+/** Back Button (Icon)                                         **/
+/*  Purpose: Use this for users to return to the home page      */
+/* ------------------------------------------------------------ */
+
+.Back-Button {
+    max-width: 42px;
+    max-height: 42px;
+    cursor: pointer;
+}
+
+/* ------------------------------------------------------ */
+/*  Submit Button (Primary Button Style)                  */
+/*  Purpose: Use this in forms for the submit button      */
+/* ------------------------------------------------------ */
+
+.Submit-Button{
+    border: 2.5px solid black;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin: 15px 10px 10px 0px;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    font-size: var(--body);
+}
+
+.Submit-Button:hover{
+    transform: scale(1.03);
+}
+
+/* ------------------------------------------------------ */
+/*  Form Styling                                          */
+/* ------------------------------------------------------ */
+
+.Form{
+    min-width: 250px;
+    border: 0.5px solid #daddd7;
+    color: #3A3A3A;
+    text-align: left;
+    border-radius: 3px;
+    padding: 40px;
+    font-weight: 600;
+}
+
+.Form-Header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: black;
+    font-size: var(--heading);
+}
+
+.Form.Group{
+    margin: 15px 10px;
+    padding: 1.5em;
+}
+
+/* ----- Field Styling ----- */
+
+.Label-Field-Title{
+    margin: 25px 0px 0px 0px;
+    font-size: var(--body);
+}
+
+.Label-Field-Value{
+    font-size: var(--body);
+    color: #929292;
+}
+
+/* ------------------------------------------------ */
+/*  Table Styling                                   */
+/* ------------------------------------------------ */
+
+.Table-Container{
+    font-size: var(--body);
+    text-align: left;
+    border: 0.5px solid #daddd7;
+    border-radius: 3px;
+}
+
+.Table-th {
+    padding: 20px 50px;
+    font-weight: 600;
+    border-bottom: 0.5px solid lightgray;
+}
+
+.Table-td {
+    padding: 20px 50px;
+    word-wrap: break-word;
+    border-bottom: 0.5px solid lightgray;
+}
+
+/* ------------------------------------------------------------ */
+/** CSS Media Queries (Mobile)                                 **/
+/* ------------------------------------------------------------ */
+
+@media (max-width: 375px) {
+
+    .Back-Button {
+        width: 35px;
+        height: 35px;
+        cursor: pointer;
+    }
+ 
+}

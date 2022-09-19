@@ -1,0 +1,41 @@
+/* ------------------------------------------------------------ */
+/** Home Page (Users) Styling                                  **/
+/* ------------------------------------------------------------ */
+
+.Home{
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    align-items: center;
+    margin: 10px 15px;
+}
+
+.Logo{
+    max-width: 90px;
+    max-height: 90px;
+    margin-right: 30px;
+}
+
+.Divider{
+    border-top: 1px solid #C1C8B9;
+    margin: 30px 0px 40px 0px;
+    min-width: 240px
+}
+
+/* ------------------------------------------------------------ */
+/** CSS Media Queries (Mobile)                                 **/
+/* ------------------------------------------------------------ */
+
+@media (max-width: 375px) {
+
+    
+    .Logo{
+        max-width: 90px;
+        max-height: 85px;
+    }
+
+    .Divider{
+        margin: 20px 0px;
+    }
+ 
+}

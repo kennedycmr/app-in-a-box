@@ -1,0 +1,55 @@
+# bitbucket-pipelines.yml
+image: gcr.io/google.com/cloudsdktool/cloud-sdk:latest
+
+pipelines:
+  # We want to only run steps based on defined branches.
+  branches:
+    # Run steps when there are changes to the master branch.
+    development:
+      - step:
+          name: Deploy to Development branch
+          deployment: development
+          script:
+
+          # Configure OS with required settings and packages.
+          - source ${BITBUCKET_CLONE_DIR}/pipelineScripts/0_setup_pipeline.sh
+
+          # Build React App with a node.js image
+          - source ${BITBUCKET_CLONE_DIR}/pipelineScripts/1_app_write_env_files.sh
+
+          # Build React App with a node.js image
+          - source ${BITBUCKET_CLONE_DIR}/pipelineScripts/2_build_react_firebase.sh
+
+          # Run Terraform
+          - source ${BITBUCKET_CLONE_DIR}/pipelineScripts/3_run_terraform.sh
+
+          # Deploy Application
+          - source ${BITBUCKET_CLONE_DIR}/pipelineScripts/4_deploy_app.sh
+
+          # Deploy Firebase
+          - source ${BITBUCKET_CLONE_DIR}/pipelineScripts/5_deploy_firebase.sh
+
+    # Run steps when there are changes to the master branch.
+    master:
+      - step:
+          name: Deploy to master branch
+          deployment: production
+          script:
+
+          # Configure OS with required settings and packages.
+          - source ${BITBUCKET_CLONE_DIR}/pipelineScripts/0_setup_pipeline.sh
+
+          # Build React App with a node.js image
+          - source ${BITBUCKET_CLONE_DIR}/pipelineScripts/1_app_write_env_files.sh
+
+          # Build React App with a node.js image
+          - source ${BITBUCKET_CLONE_DIR}/pipelineScripts/2_build_react_firebase.sh
+
+          # Run Terraform
+          - source ${BITBUCKET_CLONE_DIR}/pipelineScripts/3_run_terraform.sh
+
+          # Deploy Application
+          - source ${BITBUCKET_CLONE_DIR}/pipelineScripts/4_deploy_app.sh
+
+          # Deploy Firebase
+          - source ${BITBUCKET_CLONE_DIR}/pipelineScripts/5_deploy_firebase.sh

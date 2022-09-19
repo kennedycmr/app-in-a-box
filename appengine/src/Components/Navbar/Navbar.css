@@ -1,0 +1,115 @@
+.Navbar-Container{
+    background-color: #141C25;
+    height: 100%;
+    width: 100%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Logo */
+.Navbar-Logo{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    font-size: var(--heading);
+    font-weight: bold;
+}
+.Navbar-Logo img{
+    margin-right: 20px;
+    cursor: pointer;
+
+}
+.Navbar-Logo img:hover{
+    margin-right: 20px;
+    cursor: pointer;
+    animation-name: spin;
+    animation-duration: 1.2s;
+    animation-delay: .5s;
+}
+@keyframes spin{
+    100% {transform: rotate(360deg);}
+}
+
+/* Container for all sidebar items */
+.Navbar-Items-Container{
+    margin-top: 3%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: var(--subheading);
+}
+
+/* Logo and Header */
+.Navbar-Link{
+    color: white;
+    text-decoration: none;
+}
+.Navbar-Link:hover{
+    color: white;
+    transform: scale(1.02);
+}
+
+/* Each item in the sidebar */
+.Navbar-Items-Container-Link{
+    font-size: var(--subheading);
+    width: 100%;
+    padding: 20px;
+    text-decoration: none;
+    color: white;
+}
+.Navbar-Items-Container-Link:hover{
+    cursor: pointer;
+    transform: scale(1.02);
+    color: white;
+}
+.Navbar-Items-Container-Link-Active{
+    font-size: var(--subheading);
+    width: 100%;
+    padding: 20px;
+    text-decoration: none;
+    border-radius: 5px 0px 0px 5px;
+    color: white;
+    background-color: rgba(12, 108, 222, 1);
+    transition-delay: .1s;
+    cursor: default;
+}
+.Navbar-Items-Container-Link-Active:hover{
+    color: white;
+}
+
+/* Divider - White line under each item */
+.Navbar-Items-Divider{
+    border-top: 3px solid white;
+    width: 100%;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+/* Container for all sidebar items
+.Navbar-Items-Container{
+    margin-top: 3%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: var(--subheading);
+}
+/* Each item in the sidebar */
+/* .Navbar-Items-Container-Link{
+    font-size: var(--subheading);
+    width: 100%;
+    padding: 20px;
+    text-decoration: none;
+    color: white;
+}
+.Navbar-Items-Container-Link:hover{
+    cursor: pointer;
+    border-radius: 5px 0px 0px 5px;
+    animation-name: slide;
+    animation-duration: .5s;
+    color: white;
+    background-color: rgba(12, 108, 222, 1);
+    ;
+    transition-delay: .1s;
+} */ 

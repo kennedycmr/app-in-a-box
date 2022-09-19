@@ -1,0 +1,49 @@
+/* Registrations onload */
+.Registrations-Container {
+    display: grid;
+    grid-template-rows: .1fr 1fr;
+    grid-template-areas:
+    "Registrations-Header"
+    "Registrations-Body";
+    text-align: left;
+    padding: 2%;
+}
+
+.Registrations-Header{
+    grid-area: Registrations-Header;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+
+.Registrations-Title {
+    color: rgba(64, 119, 218, 1);
+}
+
+.Registrations-Body{
+    flex-wrap: wrap;
+    grid-area: Registrations-Body;
+    padding-top: 50px;
+    display: flex;
+}
+
+.Registrations-Table-Sort-Asc{
+    transform: rotate(270deg);
+    cursor: pointer;
+    width: 20px;
+    margin-left: 10px;
+}
+.Registrations-Table-Sort-Des{
+    transform: rotate(90deg);
+    cursor: pointer;
+    width: 20px;
+    margin-left: 10px;
+}
+
+.Searchbox input{
+    box-shadow: 1px 1px 5px rgba(98, 98, 98, 0.25);
+    border: none;
+    border-radius: 5px;
+    width: 300px;
+}
